@@ -9,8 +9,8 @@ import { Component } from '@angular/core';
        <ul>
         <li [class]="priorityColor(currentGoat)" (click)="isDone(currentGoat)" *ngFor="let currentGoat of goats">{{currentGoat.description}}
         <br>
-        <img src='{{currentGoat.image}}' style="width: 35%"/>
-        <button (click)="editGoat(currentGoat)">Rank!</button></li>
+        <img src='{{currentGoat.image}}' style="width: 25%"/>
+        <button (click)="editGoat(currentGoat)" class="btn btn-success">Rank!</button></li>
       </ul>
       <hr>
       <div>
@@ -29,7 +29,7 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  currentFocus: string = 'Rate the goat of your dreams';
+  currentFocus: string = 'Rank the goats by cuteness';
   goats: Goat[] = [
     new Goat('Sassy goat :)', 3, 'https://www.rodalesorganiclife.com/sites/rodalesorganiclife.com/files/styles/slideshow-desktop/public/goats-smart-885.jpg?itok=vyKaFfPY'),
     new Goat('Wheelchair goat', 2, 'http://i.dailymail.co.uk/i/pix/2014/05/22/article-2635754-1E1870DD00000578-376_634x388.jpg'),
